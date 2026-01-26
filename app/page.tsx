@@ -66,42 +66,121 @@ export default function Home() {
           </div>
 
           <div className="container relative px-4 md:px-6">
-            <div className="flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto">
+            <div className="flex flex-col items-center text-center space-y-8 max-w-5xl mx-auto">
               <div className="inline-flex items-center justify-center p-1 bg-gray-800/50 backdrop-blur-sm rounded-full mb-4">
-                <span className="text-xs font-medium px-3 py-1 text-gray-300">Creando Excelencia Digital</span>
+                <span className="text-xs font-medium px-3 py-1 text-gray-300">Soluciones Tecnológicas a Tu Medida</span>
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight md:leading-tight">
-                Convertimos Desafíos Complejos En
+                Soporte Técnico y
                 <span className="relative whitespace-nowrap">
                   <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-[#4169a1] via-[#b43c3c] to-[#5f825a]">
                     {" "}
-                    Soluciones Elegantes
+                    Desarrollo de Software
                   </span>
                   <span className="absolute bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#4169a1] via-[#b43c3c] to-[#5f825a] opacity-50 blur-sm"></span>
                 </span>
               </h1>
 
               <p className="text-xl text-gray-400 max-w-2xl">
-                Dynamik es donde la colaboración interdisciplinaria se encuentra con la innovación en software. No solo
-                escribimos código—resolvemos problemas que importan.
+                Te ayudamos a resolver problemas técnicos y convertimos tus ideas en sistemas funcionales
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button className="relative overflow-hidden group bg-gradient-to-r from-[#4169a1] to-[#5f825a] hover:from-[#4169a1]/90 hover:to-[#5f825a]/90 text-white border-0 h-12 px-8">
-                  <span className="relative z-10">
-                      <a href="https://api.whatsapp.com/send?phone=543834778649&text=Hola%2C%20me%20gustar%C3%ADa%20proponer%20un%20proyecto%20para%20desarrollar">
-                        Proponer un Desafío
+              {/* Servicios Destacados */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-12">
+                {/* Servicio 1: Asistencia Técnica Remota */}
+                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-900/50 border-gray-700 backdrop-blur-sm hover:border-[#4169a1] transition-all duration-300 group">
+                  <div className="p-8">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#4169a1] to-[#5f825a] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold mb-3 text-left">Asistencia Técnica Remota</h3>
+                    
+                    <div className="flex items-baseline gap-2 mb-4">
+                      <span className="text-gray-500 text-sm">desde</span>
+                      <span className="text-5xl font-bold text-white">$12.500</span>
+                      <span className="ml-auto px-3 py-1 bg-[#4169a1]/20 text-[#4169a1] text-xs rounded-full font-medium">Consultar</span>
+                    </div>
+                    
+                    <p className="text-gray-400 text-left mb-6 leading-relaxed">
+                      ¿Problemas con tu PC? Te ayudamos a instalar programas, solucionar errores y optimizar tu equipo desde donde estés.
+                    </p>
+
+                    <ul className="text-sm text-gray-400 space-y-2 mb-6 text-left">
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#4169a1] mt-1">✓</span>
+                        <span>Instalación y configuración de software</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#4169a1] mt-1">✓</span>
+                        <span>Reparación de errores del sistema</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#4169a1] mt-1">✓</span>
+                        <span>Soporte inmediato online</span>
+                      </li>
+                    </ul>
+
+                    <Button className="w-full bg-gradient-to-r from-[#4169a1] to-[#5f825a] hover:from-[#4169a1]/90 hover:to-[#5f825a]/90 text-white border-0 group-hover:shadow-lg group-hover:shadow-[#4169a1]/20 transition-all duration-300">
+                      <a href="https://api.whatsapp.com/send?phone=543834778649&text=Hola%2C%20necesito%20asistencia%20t%C3%A9cnica%20remota" className="w-full">
+                        Solicitar Soporte
                       </a>
-                  </span>
-                  <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                </Button>
+                    </Button>
+                  </div>
+                </Card>
+
+                {/* Servicio 2: Desarrollo de Software */}
+                <Card className="bg-gradient-to-br from-gray-900/90 to-gray-900/50 border-gray-700 backdrop-blur-sm hover:border-[#b43c3c] transition-all duration-300 group">
+                  <div className="p-8">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#b43c3c] to-[#d4b95e] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <Code className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold mb-3 text-left">Desarrollo de Sistemas Personalizados</h3>
+                    
+                    <div className="flex items-baseline gap-2 mb-4">
+                      <span className="text-gray-500 text-sm">desde</span>
+                      <span className="text-5xl font-bold text-white">$35.000</span>
+                    </div>
+                    
+                    <p className="text-gray-400 text-left mb-6 leading-relaxed">
+                      ¿Necesitas un "sistemita" para tu negocio? Creamos software a medida que resuelve tus necesidades específicas.
+                    </p>
+
+                    <ul className="text-sm text-gray-400 space-y-2 mb-6 text-left">
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#b43c3c] mt-1">✓</span>
+                        <span>Sistemas de gestión empresarial</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#b43c3c] mt-1">✓</span>
+                        <span>Aplicaciones web y móviles</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-[#b43c3c] mt-1">✓</span>
+                        <span>Consultoría y análisis de requerimientos</span>
+                      </li>
+                    </ul>
+
+                    <Button className="w-full bg-gradient-to-r from-[#b43c3c] to-[#d4b95e] hover:from-[#b43c3c]/90 hover:to-[#d4b95e]/90 text-white border-0 group-hover:shadow-lg group-hover:shadow-[#b43c3c]/20 transition-all duration-300">
+                      <a href="https://api.whatsapp.com/send?phone=543834778649&text=Hola%2C%20necesito%20desarrollar%20un%20sistema%20personalizado" className="w-full">
+                        Consultar Proyecto
+                      </a>
+                    </Button>
+                  </div>
+                </Card>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button
                   variant="outline"
                   className="border-gray-700 text-gray-300 hover:text-white hover:border-gray-600 h-12 px-8"
                 >
-                  <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                    Explorar Nuestro Trabajo
+                  <Link href="#solutions" className="text-gray-400 hover:text-white transition-colors">
+                    Ver Proyectos Realizados
                   </Link>
                 </Button>
               </div>
