@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Code, Sparkles, Zap, Users, Lightbulb, Puzzle, Layers, Github, Twitter, Linkedin, Mail } from "lucide-react"
 import { GradientLine } from "@/components/gradient-line"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function Home() {
   return (
@@ -42,7 +49,7 @@ export default function Home() {
 
           <div>
             <Button className="relative overflow-hidden group bg-gradient-to-r from-[#4169a1] to-[#5f825a] hover:from-[#4169a1]/90 hover:to-[#5f825a]/90 text-white border-0">
-              <span className="relative z-10">Comenzar</span>
+              <span className="relative z-10">Soy Cliente</span>
               <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
             </Button>
           </div>
@@ -194,80 +201,121 @@ export default function Home() {
           <div className="absolute top-2/3 right-1/3 w-1 h-1 bg-[#d4b95e] rounded-full animate-pulse"></div>
         </section>
 
-        {/* Why Dynamiksoft Section */}
-        <section id="why-us" className="py-20 relative">
+        {/* Clients Carousel Section */}
+        <section id="clients" className="py-20 relative bg-gradient-to-b from-black to-gray-900/50">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Por Qué Dynamik</h2>
+            <div className="flex flex-col items-center text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Clientes que
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4169a1] via-[#b43c3c] to-[#5f825a]">
+                  {" "}Confían en Nosotros
+                </span>
+              </h2>
               <p className="text-gray-400 max-w-2xl">
-                Nuestro enfoque es diferente. Combinamos diversa experiencia, pensamiento creativo y excelencia técnica
-                para abordar desafíos que otros no pueden.
+                Empresas que ya transformaron sus desafíos en soluciones digitales con Dynamik
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#4169a1]/50 transition-colors group overflow-hidden">
-                <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#4169a1]/10 to-[#5f825a]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-[#4169a1]/20 flex items-center justify-center mb-4">
-                      <Puzzle className="h-6 w-6 text-[#4169a1]" />
+            <div className="relative max-w-6xl mx-auto">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-4">
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#4169a1]/50 transition-all duration-300 group">
+                        <div className="flex aspect-video items-center justify-center p-12">
+                          <Image
+                            src="/logo-clientes/caizzen-logo.png"
+                            alt="Caizzen"
+                            width={200}
+                            height={100}
+                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                          />
+                        </div>
+                      </Card>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Solucionadores de Problemas</h3>
-                    <p className="text-gray-400">
-                      Prosperamos con desafíos complejos y abordamos cada proyecto como un rompecabezas único para
-                      resolver con creatividad y precisión.
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                  </CarouselItem>
 
-              <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#b43c3c]/50 transition-colors group overflow-hidden">
-                <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#b43c3c]/10 to-[#5f825a]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-[#b43c3c]/20 flex items-center justify-center mb-4">
-                      <Users className="h-6 w-6 text-[#b43c3c]" />
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#b43c3c]/50 transition-all duration-300 group">
+                        <div className="flex aspect-video items-center justify-center p-12">
+                          <Image
+                            src="/logo-clientes/logo-arcat-2.png"
+                            alt="Arcat"
+                            width={200}
+                            height={100}
+                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                          />
+                        </div>
+                      </Card>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Enfoque Colaborativo</h3>
-                    <p className="text-gray-400">
-                      Nuestros equipos interdisciplinarios aportan diversas perspectivas a cada proyecto, resultando en
-                      soluciones más innovadoras y robustas.
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                  </CarouselItem>
 
-              <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#5f825a]/50 transition-colors group overflow-hidden">
-                <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#5f825a]/10 to-[#4169a1]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-[#5f825a]/20 flex items-center justify-center mb-4">
-                      <Layers className="h-6 w-6 text-[#5f825a]" />
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#5f825a]/50 transition-all duration-300 group">
+                        <div className="flex aspect-video items-center justify-center p-12">
+                          <Image
+                            src="/logo-clientes/logo-enea12.jpg"
+                            alt="Enea"
+                            width={200}
+                            height={100}
+                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                          />
+                        </div>
+                      </Card>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Experiencia Flexible</h3>
-                    <p className="text-gray-400">
-                      No estamos atados a tecnologías específicas. Seleccionamos las herramientas adecuadas para cada
-                      desafío único, asegurando resultados óptimos.
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                  </CarouselItem>
 
-              <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#d4b95e]/50 transition-colors group overflow-hidden">
-                <div className="p-6 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#d4b95e]/10 to-[#4169a1]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-[#d4b95e]/20 flex items-center justify-center mb-4">
-                      <Lightbulb className="h-6 w-6 text-[#d4b95e]" />
+                  {/* Duplicar items para efecto loop infinito */}
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#4169a1]/50 transition-all duration-300 group">
+                        <div className="flex aspect-video items-center justify-center p-12">
+                          <Image
+                            src="/logo-clientes/caizzen-logo.png"
+                            alt="Caizzen"
+                            width={200}
+                            height={100}
+                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                          />
+                        </div>
+                      </Card>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Pasión por la Innovación</h3>
-                    <p className="text-gray-400">
-                      Nos impulsa una pasión genuina por crear software que marque la diferencia y rompa barreras.
-                    </p>
-                  </div>
+                  </CarouselItem>
+                </CarouselContent>
+                
+                <CarouselPrevious className="hidden md:flex -left-12 border-gray-700 bg-gray-900/50 hover:bg-gray-800 hover:border-[#4169a1]/50" />
+                <CarouselNext className="hidden md:flex -right-12 border-gray-700 bg-gray-900/50 hover:bg-gray-800 hover:border-[#4169a1]/50" />
+              </Carousel>
+
+              {/* Trust indicators */}
+              <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4169a1] to-[#5f825a]">
+                    3+
+                  </span>
+                  <span className="text-sm text-gray-400 mt-1">Clientes Activos</span>
                 </div>
-              </Card>
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#b43c3c] to-[#d4b95e]">
+                    10+
+                  </span>
+                  <span className="text-sm text-gray-400 mt-1">Proyectos Completados</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#5f825a] to-[#4169a1]">
+                    100%
+                  </span>
+                  <span className="text-sm text-gray-400 mt-1">Satisfacción</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
