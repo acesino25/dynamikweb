@@ -32,21 +32,6 @@ export default function Home() {
             />
           </div>
 
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="#why-us" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              Por Qué Nosotros
-            </Link>
-            <Link href="#solutions" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              Soluciones
-            </Link>
-            <Link href="#team" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              Equipo
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
-              Contacto
-            </Link>
-          </nav>
-
           <div>
             <Button className="relative overflow-hidden group bg-gradient-to-r from-[#4169a1] to-[#5f825a] hover:from-[#4169a1]/90 hover:to-[#5f825a]/90 text-white border-0">
               <span className="relative z-10">Soy Cliente</span>
@@ -273,6 +258,22 @@ export default function Home() {
                     </div>
                   </CarouselItem>
 
+                  <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm hover:border-[#4169a1]/50 transition-all duration-300 group">
+                        <div className="flex aspect-video items-center justify-center p-12">
+                          <Image
+                            src="/logo-clientes/logo-iventt.png"
+                            alt="Iventt"
+                            width={200}
+                            height={100}
+                            className="object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                          />
+                        </div>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+
                   {/* Duplicar items para efecto loop infinito */}
                   <CarouselItem className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
@@ -330,38 +331,29 @@ export default function Home() {
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluciones Destacadas</h2>
               <p className="text-gray-400 max-w-2xl">
-                Explora algunos de nuestros proyectos más innovadores que muestran nuestras capacidades de resolución de
-                problemas.
+                Descubre algunas de nuestras soluciones desarrolladas para organizaciones y proyectos.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm overflow-hidden group">
                 <div className="p-6 relative">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#4169a1] to-[#5f825a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-lg bg-[#4169a1]/20 flex items-center justify-center">
-                        <Code className="h-8 w-8 text-[#4169a1]" />
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-[#4169a1]/20 flex items-center justify-center">
+                        <Users className="h-6 w-6 text-[#4169a1]" />
                       </div>
+                      <h3 className="text-xl font-bold">iventt</h3>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Eventia</h3>
-                      <p className="text-gray-400 mb-4">
-                        Una plataforma de eventos pensada para solucionar los cuellos de botella organizacionales. Automatizando procesos y simplificando aquellos
-                        complejos.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2 py-1 bg-[#4169a1]/20 text-[#4169a1]/90 text-xs rounded-full">
-                          Mobile y Web
-                        </span>
-                        <span className="px-2 py-1 bg-[#5f825a]/20 text-[#5f825a]/90 text-xs rounded-full">
-                          Offline
-                        </span>
-                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                          Arquitectura híbrida
-                        </span>
-                      </div>
+                    <p className="text-gray-400 mb-2">
+                      Plataforma de eventos académicos diseñada para gestionar inscripciones, horarios y comunicación entre
+                      asistentes y organizadores.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-[#4169a1]/20 text-[#4169a1]/90 text-xs rounded-full">Eventos</span>
+                      <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">Académico</span>
+                      <span className="px-2 py-1 bg-[#5f825a]/20 text-[#5f825a]/90 text-xs rounded-full">Inscripciones</span>
                     </div>
                   </div>
                 </div>
@@ -370,29 +362,20 @@ export default function Home() {
               <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm overflow-hidden group">
                 <div className="p-6 relative">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5f825a] to-[#b43c3c] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-lg bg-[#5f825a]/20 flex items-center justify-center">
-                        <Zap className="h-8 w-8 text-[#5f825a]" />
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-[#5f825a]/20 flex items-center justify-center">
+                        <Zap className="h-6 w-6 text-[#5f825a]" />
                       </div>
+                      <h3 className="text-xl font-bold">parker</h3>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Transcribe.Io</h3>
-                      <p className="text-gray-400 mb-4">
-                        Plataforma de transcripción de audio multi idioma en línea. Funciona con cola de espera, prioridad de usuarios, soporte de múltiples extensiones.
-                        Posibilidad de exportar el texto generado.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2 py-1 bg-[#5f825a]/20 text-[#5f825a]/90 text-xs rounded-full">
-                          Sintetización de audio
-                        </span>
-                        <span className="px-2 py-1 bg-[#b43c3c]/20 text-[#b43c3c]/90 text-xs rounded-full">
-                          Cola de procesos
-                        </span>
-                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                          Arquitectura cloud
-                        </span>
-                      </div>
+                    <p className="text-gray-400 mb-2">
+                      Sistema de gestión de plazas vehiculares para instituciones, con reservas, control de accesos y reportes.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-[#5f825a]/20 text-[#5f825a]/90 text-xs rounded-full">Gestión Vehicular</span>
+                      <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">Reservas</span>
+                      <span className="px-2 py-1 bg-[#b43c3c]/20 text-[#b43c3c]/90 text-xs rounded-full">Reportes</span>
                     </div>
                   </div>
                 </div>
@@ -401,57 +384,20 @@ export default function Home() {
               <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm overflow-hidden group">
                 <div className="p-6 relative">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#b43c3c] to-[#d4b95e] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-lg bg-[#b43c3c]/20 flex items-center justify-center">
-                        <Sparkles className="h-8 w-8 text-[#b43c3c]" />
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-[#b43c3c]/20 flex items-center justify-center">
+                        <Sparkles className="h-6 w-6 text-[#b43c3c]" />
                       </div>
+                      <h3 className="text-xl font-bold">cubas</h3>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">EssentIA</h3>
-                      <p className="text-gray-400 mb-4">
-                        Una plataforma en construcción para perfumerías. Permite a los usuarios entender cuál es la fragrancia ideal y a las perfumerías tener un vendedor
-                        que funciona en automático capaz de guiar y crear una experiencia de compra soñada.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2 py-1 bg-[#b43c3c]/20 text-[#b43c3c]/90 text-xs rounded-full">
-                          IA
-                        </span>
-                        <span className="px-2 py-1 bg-[#d4b95e]/20 text-[#d4b95e]/90 text-xs rounded-full">
-                          Offline first
-                        </span>
-                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">Arquitectura híbrida</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="bg-gray-900/50 border-gray-800 backdrop-blur-sm overflow-hidden group">
-                <div className="p-6 relative">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#d4b95e] to-[#4169a1] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  <div className="flex flex-col md:flex-row gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-lg bg-[#d4b95e]/20 flex items-center justify-center">
-                        <Users className="h-8 w-8 text-[#d4b95e]" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">Securización de redes</h3>
-                      <p className="text-gray-400 mb-4">
-                        Soporte técnico remoto. Gestión, control, prevención, recuperación y control de intrusiones en redes.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-2 py-1 bg-[#d4b95e]/20 text-[#d4b95e]/90 text-xs rounded-full">
-                          Colaboración en Equipo
-                        </span>
-                        <span className="px-2 py-1 bg-[#4169a1]/20 text-[#4169a1]/90 text-xs rounded-full">
-                          Gestión del Conocimiento
-                        </span>
-                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                          Trabajo remoto
-                        </span>
-                      </div>
+                    <p className="text-gray-400 mb-2">
+                      Gestor académico optimizado con automatización de procesos: gestión de cursos, calificaciones y tareas.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-[#b43c3c]/20 text-[#b43c3c]/90 text-xs rounded-full">Gestión Académica</span>
+                      <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">Automatización</span>
+                      <span className="px-2 py-1 bg-[#d4b95e]/20 text-[#d4b95e]/90 text-xs rounded-full">Calificaciones</span>
                     </div>
                   </div>
                 </div>
@@ -515,7 +461,7 @@ export default function Home() {
       {/* Footer */}
       <footer id="contact" className="border-t border-gray-800 py-12 relative">
         <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Image
@@ -531,25 +477,19 @@ export default function Home() {
                 interdisciplinaria.
               </p>
               <div className="flex space-x-4">
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors group">
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-[#4169a1] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                    <Twitter className="h-5 w-5 relative z-10" />
-                  </div>
-                </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors group">
+                <Link href="https://ar.linkedin.com/in/jotsuha-castro25" className="text-gray-400 hover:text-white transition-colors group">
                   <div className="relative">
                     <div className="absolute inset-0 bg-[#5f825a] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     <Linkedin className="h-5 w-5 relative z-10" />
                   </div>
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors group">
+                <Link href="https://github.com/acesino25" className="text-gray-400 hover:text-white transition-colors group">
                   <div className="relative">
                     <div className="absolute inset-0 bg-[#b43c3c] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     <Github className="h-5 w-5 relative z-10" />
                   </div>
                 </Link>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors group">
+                <Link href="mailto:dynamiksoftware@gmail.com" className="text-gray-400 hover:text-white transition-colors group">
                   <div className="relative">
                     <div className="absolute inset-0 bg-[#d4b95e] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     <Mail className="h-5 w-5 relative z-10" />
@@ -559,28 +499,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-bold">Empresa</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#why-us" className="text-gray-400 hover:text-white transition-colors">
-                    Sobre Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#team" className="text-gray-400 hover:text-white transition-colors">
-                    Nuestro Enfoque
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#team" className="text-gray-400 hover:text-white transition-colors">
-                    Equipo
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-bold">Soluciones</h3>
+              <h3 className="text-lg font-bold">Servicios</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#" className="text-gray-400 hover:text-white transition-colors">
